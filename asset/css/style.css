@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --color-dark: #1B1B1B;
+    --color-primary: #DA4533;
+    --color-gray-dark: #5C5C5C;
+    --color-gray: #8A8A8A;
+    --color-light: #F9F9F9;
+
+    /* Oq rang opacity bilan */
+    --color-white-5: rgba(255, 255, 255, 0.05);
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-15: rgba(255, 255, 255, 0.15);
+    --color-white-dark-20: rgba(150, 150, 150, 0.05);
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "STIX Two Text", serif;
+}
+
+p,
+.btn-s {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+    background: var(--color-dark);
+}
+
+
+/* Navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    box-shadow: var(--box-shadow-menu);
+    background-color: #fafafa !important;
+}
+
+.navbar-expand-lg {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    background-color: #1B1B1B !important;
+    /* fon rangi */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.offcanvas-end {
+    background: var(--color-dark);
+}
+
+.offcanvas-body .navbar-nav .nav-item {
+    font-size: 34px;
+}
+
+.header-contact-title {
+    font-size: 18px;
+    color: var(--color-gray-dark);
+}
+
+.header-contact-text,
+.services-swiper .card-text {
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+
+
+
+/* Header */
+
+
+
+.fancy-quote {
+    font-size: 55px;
+    position: relative;
+    display: inline-block;
+}
+
+.fancy-quote::before {
+    content: "‘";
+    /* ochilish qo‘shtirnoq */
+    position: absolute;
+    left: -20px;
+    /* chapga chiqarish */
+    top: -10px;
+    /* biroz yuqoriga yoki pastga tushirish */
+    font-size: 50px;
+    color: var(--color-primary);
+}
+
+.fancy-quote::after {
+    content: "’";
+    position: absolute;
+    left: 60%;
+    /* matn tugagan joyga yopishtirish */
+    bottom: 0px;
+    transform: translateX(0);
+    /* kerak bo‘lsa -20px qo‘shib sozlaysan */
+    font-size: 50px;
+    color: var(--color-primary);
+}
+
+.header-text {
+    color: var(--color-gray);
+}
+
+.header-text:nth-last-child(1) {
+    font-size: 18px;
+}
+
+.header-personal-button {
+    background: var(--color-primary) !important;
+    border: 1px solid var(--color-primary);
+}
+
+.header-services-button img {
+    right: -15px;
+}
+
+/* About */
+.about,
+.about-brand {
+    margin-top: 80px;
+}
+
+.about-content .about-title,
+.about-brand .about-title,
+.services-title,
+.collection-title {
+    font-size: 38px;
+}
+
+.about-content .about-text,
+.about-brand .about-text,
+.services-subtitle,
+.collection-subtitle {
+    color: var(--color-gray);
+}
+
+.about-card {
+    background: linear-gradient(145deg, #2cd4cd 15%, transparent 30%);
+    padding: 1px;
+    /* chiziq qalinligi */
+    border-radius: 17px !important;
+}
+
+.about-blog,
+.about-brand-img {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+
+.about-blog h2 {
+    font-size: 36px;
+}
+
+.about-blog p {
+    color: var(--color-gray);
+    width: 75%;
+}
+
+.about-brand-img {
+    height: 120px;
+}
+
+/* services */
+.services {
+    margin-top: 80px;
+}
+
+.services-bg-img {
+    height: 970px;
+    object-fit: cover;
+}
+
+.services .card {
+    background: var(--color-dark);
+    overflow: hidden;
+    height: 400px !important;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.services-subtitle,
+.collection-subtitle {
+    max-width: 75%;
+}
+
+.services .card .card-header i {
+    color: var(--color-gray-dark);
+    transform: rotate(40deg);
+}
+
+.services .card:hover .card-header i {
+    color: var(--color-light);
+    transition: .3s;
+}
+
+.services-swiper .card-title {
+    font-size: 18px;
+    color: var(--color-gray);
+    transition: .3s;
+}
+
+.services .card:hover .card-title {
+    color: var(--color-light);
+}
+
+.services .card .card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.services .card:hover .card-text {
+    transform: translateY(0);
+    position: static;
+}
+
+.services-swiper,
+.collection-swiper,
+.team-swiper {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.swiper-button-next,
+ .swiper-button-prev {
+    top: auto;
+    bottom: 0px;
+    transform: none;
+    left: 50%;
+}
+
+.swiper-button-prev {
+    margin-left: -90px;
+    width: 100px !important;
+}
+
+.swiper-button-next {
+    margin-left: -10px;
+    width: 100px !important;
+}
+
+/* Default iconni olib tashlash */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.swiper-button-next::after {
+    background-image: url("/asset/image/sliders-next.svg");
+}
+
+.swiper-button-prev::after {
+    background-image: url('/asset/image/sliders.svg');
+}
+
+/* offers */
+
+.offers-image .services-bg-img {
+    height: 970px !important;
+}
+
+.offers-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.offers-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+.quiz-box {
+    background: var(--color-dark);
+}
+
+.ofers-prew-button img {
+    transform: rotate(180deg);
+    left: -15px !important;
+}
+
+.offers-quesion h3 {
+    font-size: 36px;
+}
+
+.offer-answer.active {
+    background: var(--color-primary);
+}
+
+.offer-answer {
+    background: var(--color-white-5);
+}
+
+/* collection */
+.collection {
+    margin-top: 160px;
+}
+.collection-card {
+    height: 280px;
+}
+
+.collection-card-top {
+    background: var(--color-white-5);
+}
+
+.collection-body {
+    background: var(--color-white-dark-20);
+}
+
+.card-collection i {
+    transform: rotate(40deg);
+    color: var(--color-gray-dark);
+}
+
+.card-footer .card-text {
+    color: var(--color-gray);
+}
+
+/* team */
+
+.team-bg-image .team-img {
+    object-fit: cover;
+    height: 1500px;
+}
+
+.team-bg-image .card img{
+     filter: grayscale(100%);
+}
+
+.team-bg-image .card .card-body .card-title {
+    font-size: 18px;
+    color: var(--color-dark);
+}
+.team-bg-image .card .card-body .card-text {
+    font-size: 14px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .fancy-quote {
+        font-size: 48px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .collection-card {
+        height: 300px;
+    }
+
+    .collection-card-top img{
+        max-width: 147px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container-lg {
+        --bs-gutter-x: 4rem;
+    }
+
+    .fancy-quote {
+        font-size: 44px;
+    }
+
+    .fancy-quote::after {
+        left: 65%;
+    }
+
+    .about-content .about-title,
+    .about-brand .about-title,
+    .services-title,
+    .collection-title {
+        font-size: 32px;
+    }
+
+    .services-bg-img {
+        height: 777px;
+    }
+
+    .offers-position-img {
+        top: -160px;
+        right: 30px;
+    }
+
+    .offers-image .services-bg-img {
+        height: 1170px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-contact-img img {
+        max-width: 350px !important;
+    }
+
+    .fancy-quote {
+        font-size: 34px;
+    }
+
+    .fancy-quote::after {
+        left: 100%;
+    }
+
+    .about-brand-img {
+        height: 110px;
+    }
+
+    .about-blog h2,
+    .about-content .about-title,
+    .about-brand .about-title,
+    .services-title,
+    .collection-title {
+        font-size: 28px;
+    }
+
+    .about-blog p,
+    .services-subtitle,
+    .collection-subtitle {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .services-swiper .card-title {
+        font-size: 16px;
+    }
+
+    .offers-position-img {
+        width: 250px;
+        right: 20px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .header-text,
+    .header-personal-button,
+    .offers-text p,
+    .offers-dots p,
+    .offer-answer p {
+        font-size: 14px;
+    }
+
+    .fancy-quote::after {
+        bottom: -10px;
+    }
+
+    .about-brand-img {
+        height: 80px;
+    }
+
+    .offers-image .services-bg-img {
+        height: 1270px !important;
+    }
+
+    .offers-quesion h3 {
+        font-size: 24px;
+    }
+
+    .offers-position-img {
+        width: 150px;
+        top: -130px;
+        right: 10px;
+    }
+
+}
+
+@media screen and (min-width: 576px){
+    .collection-card-top,
+    .collection-body{
+        height: 100%;
+    }
+}

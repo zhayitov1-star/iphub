@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPhub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark position-relative">
+            <div class="container-fluid container-lg d-flex align-items-center justify-content-between">
+
+                <!-- Chap taraf: Logo -->
+                <a class="navbar-brand text-white" href="#">
+                    <img src="asset/image/logo.svg" alt="logo">
+                </a>
+
+                <!-- O‘rtada: Raqam + tugma -->
+                <div class="header-number d-none  d-md-flex text-center position-absolute start-50 translate-middle-x">
+                    <p class="mb-0 me-3 fw-medium text-white">+7 (888) 888 88 88</p>
+                    <a href="#" class="text-danger small text-decoration-none">Получить консультацию</a>
+                </div>
+
+                <!-- O‘ng taraf: Menyu (katta ekran uchun) -->
+                <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-3">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Кейсы</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Burger tugma (faqat kichik ekranlarda) -->
+                <button class="navbar-toggler border-0 d-lg-none p-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <img src="asset/image/menu-burger.svg" alt="">
+                </button>
+
+            </div>
+        </nav>
+
+        <!-- Offcanvas menyu (mobil uchun) -->
+        <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-12">
+                        <ul class="navbar-nav fs-4">
+                            <li class="nav-item mb-3"><a class="nav-link text-white" href="#">Услуги</a></li>
+                            <li class="nav-item mb-3"><a class="nav-link text-white" href="#">Кейсы</a></li>
+                            <li class="nav-item mb-3"><a class="nav-link text-white" href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-5 col-12">
+                        <div class="header-contact">
+                            <div class="mb-5">
+                                <p class="header-contact-title fw-medium">Наши контакты:</p>
+                                <div class="">
+                                    <p class="mb-0 text-white fw-medium mb-3">example@iphub.com</p>
+                                    <p class="mb-0 text-white fw-medium">+7 (888) 888 88 88</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <p class="header-contact-title fw-medium ">Мы в соцсетях:</p>
+                                <div class="">
+                                    <p class="mb-0 fw-medium mb-3"><a href="" class="text-white">Facebook</a></p>
+                                    <p class="mb-0 fw-medium"><a href="" class="text-white">Instagram</a></p>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <p class="header-contact-title fw-medium ">Как добраться:</p>
+                                <div class="">
+                                    <p class="mb-0 fw-medium mb-3"><a href="" class="text-white">Схема проезда</a></p>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <p class="header-contact-text fw-normal ">123317, г. Москва, Пресненская наб., д. 8,
+                                    стр. 1,
+                                    эт. 3, п. 1, оф. 10</p>
+                                <div class="d-flex">
+                                    <p class="mb-0 me-3 header-contact-text fw-normal mb-3">ИНН: 7703472433</p>
+                                    <p class="mb-0 header-contact-text fw-normal">КПП: 770301001</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-none d-sm-block col-md-8">
+                        <div class="mb-5 w-auto header-contact-img">
+                            <img src="asset/image/image_2.svg" class="w-auto" alt="">
+                            <!-- <img src="asset/image/25.svg" alt="">
+                            <img src="asset/image/vector.svg" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="header-section d-flex align-items-center">
+            <div class="container-lg">
+                <div class="row mt-5">
+                    <div
+                        class="col-xl-6 col-md-7 col-12 text-white d-flex flex-column justify-content-center  text-md-start text-center">
+                        <p class="header-text fw-medium mb-4">ВАШ IP ПАРТНЕР</p>
+                        <h1 class="header-title fancy-quote fw-medium mb-4">Интеллектуальная собственность <div
+                                class="header-element position-relative"></div>
+                        </h1>
+                        <p class="header-text fw-medium">Индивидуальные правовые решения для защиты и охраны ваших
+                            нематериальных активов в России и за рубежом</p>
+                        <div class="header-button-group d-md-flex  align-items-center gap-4 mt-5">
+                            <a href="#"
+                                class="header-personal-button btn text-white px-md-5 px-4 py-3 fw-medium rounded-circle btn-s mb-4">Получить
+                                индивидуальную <br> консультацию</a>
+                            <a href="#"
+                                class="btn btn-outline-danger px-4 py-2 fw-medium btn-s  mb-4 rounded-circle header-services-button position-relative d-inline-flex align-items-center gap-2">
+                                Все услуги
+                                <img src="asset/image/arrow-8.svg" class="position-absolute" alt="">
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-5 d-none d-md-flex justify-content-center align-items-center">
+                        <div class="header-scroll-img ">
+                            <img src="asset/image/scroll-img.svg" class="w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="about">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="about-img">
+                            <img src="asset/image/image-2.svg" class="d-none" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="about-content text-white">
+                            <h1 class="about-title fw-normal mb-4">Многолетний опыт</h1>
+                            <p class="about-text fw-medium mb-4">Наша компания была создана в 2019 году специалистами,
+                                имеющими опыт работы в сфере интеллектуальной собственности более 20 лет</p>
+                            <div class="row align-items-stretch gy-4">
+                                <div class="col-sm-6 col-12">
+                                    <div class="about-card cursor-pointer z-3 h-100">
+                                        <div
+                                            class="about-blog h-100 d-flex flex-sm-column align-items-center align-items-sm-start justify-content-center w-100 p-3 rounded-3">
+                                            <h2 class="fw-medium text-white me-3 me-sm-0"> >300</h2>
+                                            <p class="fw-normal mb-sm-0 text-break">Представления интересов в спорах
+                                                по IP правам в год</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="about-card cursor-pointer z-3 h-100">
+                                        <div
+                                            class="about-blog h-100 d-flex flex-sm-column align-items-center align-items-sm-start justify-content-center w-100 p-3 rounded-3">
+                                            <h2 class="fw-medium text-white me-3 me-sm-0"> >2500</h2>
+                                            <p class="fw-normal mb-sm-0 text-break">Оказаний юридической помощи
+                                                компаниям в год</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="about-card cursor-pointer z-3 h-100">
+                                        <div
+                                            class="about-blog h-100 d-flex flex-sm-column align-items-center align-items-sm-start justify-content-center w-100 p-3 rounded-3">
+                                            <h2 class="fw-medium text-white me-3 me-sm-0"> 1150</h2>
+                                            <p class="fw-normal mb-sm-0 text-break">Завершённых дел по регистрации
+                                                товарных знаков</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="about-card cursor-pointer z-3 h-100">
+                                        <div
+                                            class="about-blog h-100 d-flex flex-sm-column align-items-center align-items-sm-start justify-content-center w-100 p-3 rounded-3">
+                                            <h2 class="fw-medium text-white me-3 me-sm-0"> 61</h2>
+                                            <p class="fw-normal mb-sm-0 text-break">Совокупный опытэкспертов</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="about-card cursor-pointer z-3 h-100">
+                                        <div
+                                            class="about-blog h-100 d-flex flex-sm-column align-items-center align-items-sm-start justify-content-center w-100 p-3 rounded-3">
+                                            <h2 class="fw-medium text-white me-3 me-sm-0"> 99%</h2>
+                                            <p class="fw-normal mb-sm-0 text-break">Успех полученияпатентов</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="about-card cursor-pointer z-3 h-100">
+                                        <div
+                                            class="about-blog h-100 d-flex flex-sm-column align-items-center align-items-sm-start justify-content-center w-100 p-3 rounded-3">
+                                            <h2 class="fw-medium text-white me-3 me-sm-0"> 98%</h2>
+                                            <p class="fw-normal mb-sm-0 text-break">Успех регистрациитоварных знаков
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-brand text-white ">
+                            <h1 class="about-title fw-normal mb-4">Подтвержденный практикой</h1>
+                            <p class="about-text fw-medium mb-4">Мы и наши клиенты гордимся опытом, который
+                                подтверждается нашими результатами от закрепления прав заявителей до успешной защиты
+                                интересов</p>
+
+                            <div class="row align-items-stretch gy-4">
+                                <div class="col-md-6 col-12">
+                                    <div
+                                        class="about-brand-img rounded-3 d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/depot.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div
+                                        class="about-brand-img rounded-3 d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/meta.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div
+                                        class="about-brand-img rounded-3 d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/deneb.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div
+                                        class="about-brand-img rounded-3 d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/mone.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div
+                                        class="about-brand-img rounded-3 d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/betcity.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div
+                                        class="about-brand-img rounded-3 d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/fish2o.svg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <section class="services d-flex flex-column align-items-center justify-content-center">
+            <div class=" position-relative">
+                <img src="asset/image/backgroud_grey.svg" class="services-bg-img  w-100" alt="">
+                <div class="container-lg position-absolute top-50 start-50 translate-middle">
+                    <div class="services-text mb-md-5 mb-2">
+                        <h1 class="services-title fw-normal mb-4">Решения для вашего бизнеса</h1>
+                        <div class="d-md-inline-flex justify-content-between">
+                            <p class="services-subtitle text-break fw-medium mb-4">У нас есть все необходимые ресурсы
+                                для решения любых ваших потребностей в сфере интеллектуальной собственности </p>
+                            <a href="#"
+                                class="btn btn-outline-danger px-4 py-2 fw-medium btn-s mb-4 rounded-circle header-services-button position-relative d-none d-md-inline-flex align-items-center gap-2 align-self-start">
+                                Все услуги
+                                <img src="asset/image/arrow-8.svg" class="position-absolute" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Swiper -->
+                    <div class="swiper services-swiper">
+                        <div class="swiper-wrapper d-flex align-items-stretch">
+                            <div class="swiper-slide h-100">
+                                <div class="card cursor-pointer ">
+                                    <div class="card-header border-0 bg-transparent d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <div class="card-body  d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/objects.svg" alt="">
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-body-secondary">
+                                        <p class="card-title text-start fw-medium ">Изобретения и Полезные модели </p>
+                                        <p class="card-text text-start">Регистрация прав инновационные устройства,
+                                            способы
+                                            или
+                                            технологии</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-100">
+                                <div class="card cursor-pointer ">
+                                    <div class="card-header border-0 bg-transparent d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <div class="card-body  d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/objects-1.svg" alt="">
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-body-secondary">
+                                        <p class="card-title text-start fw-medium ">Изобретения и Полезные модели </p>
+                                        <p class="card-text text-start">Регистрация прав инновационные устройства,
+                                            способы
+                                            или технологии</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-100">
+                                <div class="card cursor-pointer ">
+                                    <div class="card-header border-0 bg-transparent d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <div class="card-body  d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/objects-2.svg" alt="">
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-body-secondary">
+                                        <p class="card-title text-start fw-medium ">Изобретения и Полезные модели </p>
+                                        <p class="card-text text-start">Регистрация прав инновационные устройства,
+                                            способы
+                                            или
+                                            технологии</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-100">
+                                <div class="card cursor-pointer ">
+                                    <div class="card-header border-0 bg-transparent d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <div class="card-body  d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/objects-3.svg" alt="">
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-body-secondary">
+                                        <p class="card-title text-start fw-medium ">Изобретения и Полезные модели </p>
+                                        <p class="card-text text-start">Регистрация прав инновационные устройства,
+                                            способы
+                                            или
+                                            технологии</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-100">
+                                <div class="card cursor-pointer ">
+                                    <div class="card-header border-0 bg-transparent d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <div class="card-body  d-flex align-items-center justify-content-center">
+                                        <img src="asset/image/objects-4.svg" alt="">
+                                    </div>
+                                    <div class="card-footer border-0 bg-transparent text-body-secondary">
+                                        <p class="card-title text-start fw-medium ">Изобретения и Полезные модели </p>
+                                        <p class="card-text text-start">Регистрация прав инновационные устройства,
+                                            способы
+                                            или
+                                            технологии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+
+                    </div>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <a href="#"
+                            class="btn btn-outline-danger text-center px-4 py-2 fw-medium btn-s rounded-circle header-services-button position-relative d-md-none d-inline-flex align-items-center gap-2 align-self-start">
+                            Все услуги
+                            <img src="asset/image/arrow-8.svg" class="position-absolute" alt="">
+                        </a>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="offers">
+            <div class="offers-image position-relative">
+                <img src="asset/image/backgroud_grey.svg" class="services-bg-img  w-100" alt="">
+                <div class="container-lg position-absolute top-50 start-50 translate-middle z-3">
+                    <img src="asset/image/offers-position-img.svg"
+                        class="offers-position-img d-lg-none position-absolute" alt="">
+                    <div class="row ">
+                        <div class="col-lg-10 col-md-8">
+                            <div class="offers-text text-white mb-lg-5 mb-3">
+                                <h2 class="mb-3 fw-normal">Не знаете, что вам нужно?</h2>
+                                <p class="fw-medium">Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи
+                                </p>
+                            </div>
+
+                            <div class="quiz-box p-lg-5 p-3 rounded">
+                                <div
+                                    class="offers-quesion d-flex justify-content-between align-items-center text-white">
+                                    <p class="fw-medium fs-sm-4 fs-5">С какой целью вы обращаетесь?</p>
+                                    <h3 class="fw-medium "><span class=" text-danger">2</span>/8</h3>
+                                </div>
+                                <div class="row align-items-start gy-4">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="offer-answer active p-sm-3 p-2 text-white">
+                                            <p class="fw-medium mb-0">Регистрацию промышленного образца</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="offer-answer p-sm-3 p-2 text-white">
+                                            <p class="fw-medium mb-0">Подготовка заявки на выдачу патента</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <div class="offer-answer p-sm-3 p-2 text-white">
+                                            <p class="fw-medium mb-0">Регистрацию прав на использование полезной модели,
+                                                промобразца, изобретенния</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="offer-answer p-sm-3 p-2 text-white">
+                                            <p class="fw-medium mb-0">Регистрацию изобретения</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <div class="offer-answer p-sm-3 p-2 text-white">
+                                            <p class="fw-medium mb-0">Регистрацию изобретения</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="offer-answer p-sm-3 p-2 text-white">
+                                            <p class="fw-medium mb-0">Подготовка заявки на передачу прав патента</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Tugmalar -->
+                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                    <a href="#"
+                                        class="btn btn-outline-danger px-5 py-2 fw-medium btn-s mb-4 mb-md-0 rounded-circle header-services-button ofers-prew-button position-relative d-none d-md-inline-flex align-items-center gap-2 align-self-start">
+                                        <img src="asset/image/arrow-8.svg" class="position-absolute" alt="">
+
+                                        Назад
+                                    </a>
+                                    <a href="#"
+                                        class="btn btn-outline-danger px-5 py-2 fw-medium btn-s mb-4 mb-md-0 rounded-circle header-services-button position-relative d-none d-md-inline-flex align-items-center gap-2 align-self-start">
+                                        Далее
+                                        <img src="asset/image/arrow-8.svg" class="position-absolute" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3 gy-2">
+                                <div class="col-12">
+                                    <p class="fw-medium text-white fs-sm-4 fs-5">Бонусы после прохождения</p>
+                                </div>
+                                <div class="col-xl-4 col-lg-6">
+                                    <div
+                                        class="offers-dots bg-dark rounded p-3 d-flex justify-content-between align-items-center">
+                                        <img src="asset/image/objects-one.svg" alt="">
+                                        <p class="fw-medium text-white">Название бонуса в однуили две строки</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-6">
+                                    <div
+                                        class="offers-dots bg-dark rounded p-3 d-flex justify-content-between align-items-center">
+                                        <img src="asset/image/objects-two.svg" alt="">
+                                        <p class="fw-medium text-white">Название бонуса в однуили две строки</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+
+        <section class="collection">
+            <div class="container-lg">
+                <div class="collection-text mb-md-5 mb-2">
+                    <h1 class="collection-title text-white fw-normal mb-4">Реализованные кейсы</h1>
+                    <div class="d-md-inline-flex justify-content-between">
+                        <p class="collection-subtitle text-break fw-medium mb-4">Наши реальные истории о том,
+                            как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты
+                            интеллектуальной собственности</p>
+                        <a href="#"
+                            class="btn btn-outline-danger px-4 py-2 fw-medium btn-s mb-4 rounded-circle collection-button position-relative d-none d-md-inline-flex align-items-center gap-2 align-self-start">
+                            Все кейсы
+                            <img src="asset/image/arrow-8.svg" class="position-absolute" alt="">
+                        </a>
+                    </div>
+
+                </div>
+                <!-- Swiper -->
+                <div class="swiper collection-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide h-100">
+                            <div
+                                class="collection-card cursor-pointer rounded  d-sm-flex align-items-center justify-content-center ">
+                                <div
+                                    class="collection-card-top position-relative d-flex p-xxl-5 p-lg-3 p-5 align-items-center justify-content-center">
+                                    <div
+                                        class="card-collection border-0 position-absolute top-0 end-0 p-2 d-sm-none d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <img src="asset/image/collection-traced.svg" alt="">
+                                </div>
+                                <div class="collection-body p-4">
+                                    <div class="card-collection border-0 d-none d-sm-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+
+                                    <div
+                                        class="card-footer border-0 mt-xl-5 mt-3 d-flex flex-column justify-content-center text-white">
+                                        <p class="card-title fs-6 text-start fw-medium ">CIRKLE — производитель
+                                            косметической продукции</p>
+                                        <p class="card-text fw-normal text-start" style="font-size: 14px;">
+                                            Как в результате защиты мы зарегистрировали бренд российской косметики
+                                            при наличии оснований для отказа</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-100">
+                            <div
+                                class="collection-card cursor-pointer rounded  d-sm-flex align-items-center justify-content-center ">
+                                <div
+                                    class="collection-card-top position-relative d-flex p-xxl-5 p-lg-3 p-5 align-items-center justify-content-center">
+                                    <div
+                                        class="card-collection border-0 position-absolute top-0 end-0 p-2 d-sm-none d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <img src="asset/image/collection-traced.svg" alt="">
+                                </div>
+                                <div class="collection-body p-4">
+                                    <div class="card-collection border-0 d-none d-sm-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+
+                                    <div
+                                        class="card-footer border-0 mt-xl-5 mt-3 d-flex flex-column justify-content-center text-white">
+                                        <p class="card-title fs-6 text-start fw-medium ">CIRKLE — производитель
+                                            косметической продукции</p>
+                                        <p class="card-text fw-normal text-start" style="font-size: 14px;">
+                                            Как в результате защиты мы зарегистрировали бренд российской косметики
+                                            при наличии оснований для отказа</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-100">
+                            <div
+                                class="collection-card cursor-pointer rounded  d-sm-flex align-items-center justify-content-center ">
+                                <div
+                                    class="collection-card-top position-relative d-flex p-xxl-5 p-lg-3 p-5 align-items-center justify-content-center">
+                                    <div
+                                        class="card-collection border-0 position-absolute top-0 end-0 p-2 d-sm-none d-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+                                    <img src="asset/image/collection-traced.svg" alt="">
+                                </div>
+                                <div class="collection-body p-4">
+                                    <div class="card-collection border-0 d-none d-sm-flex justify-content-end">
+                                        <i class="fa-solid fa-arrow-up fs-4"></i>
+                                    </div>
+
+                                    <div
+                                        class="card-footer border-0 mt-xl-5 mt-3 d-flex flex-column justify-content-center text-white">
+                                        <p class="card-title fs-6 text-start fw-medium ">CIRKLE — производитель
+                                            косметической продукции</p>
+                                        <p class="card-text fw-normal text-start" style="font-size: 14px;">
+                                            Как в результате защиты мы зарегистрировали бренд российской косметики
+                                            при наличии оснований для отказа</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="team-bg-image position-relative">
+                <img src="asset/image/backgroud_grey.svg" class=" team-img w-100" alt="">
+                <div class="container-lg position-absolute top-50 start-50 translate-middle">
+                    <div class="team-text mb-md-5 mb-2">
+                        <h1 class="team-title text-dark fw-normal mb-4">Команда экспертов</h1>
+                        <p class="team-subtitle text-break fw-medium mb-4">Наша команда — эксперты в сфере IP.
+                            Мы берёмся за работу и доводим дело до конца, потому что понимаем ценности вашего бизнеса
+                        </p>
+                    </div>
+
+                    <div class="swiper team-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card rounded bg-transparent border-0">
+                                    <img src="asset/image/team-expert.svg" class="card-img-top w-auto h-auto" alt="...">
+                                    <div class="card-body ps-0 bg-transparent">
+                                        <p class="card-title fw-medium">Раймм Лидия Вячеславовна</p>
+                                        <p class="card-text fw-normal">Генеральный директор</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card rounded bg-transparent border-0">
+                                    <img src="asset/image/team-expert.svg" class="card-img-top w-auto h-auto" alt="...">
+                                    <div class="card-body ps-0 bg-transparent">
+                                        <p class="card-title fw-medium">Золотов ГеннадийБорисович</p>
+                                        <p class="card-text fw-normal">Руководитель отдела патентно-юридического
+                                            делопроизводства</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card rounded bg-transparent border-0">
+                                    <img src="asset/image/team-expert.svg" class="card-img-top w-auto h-auto" alt="...">
+                                    <div class="card-body ps-0 bg-transparent">
+                                        <p class="card-title fw-medium">Осоргина Екатерина Александровна</p>
+                                        <p class="card-text fw-normal">Патентный поверенный РФ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card rounded bg-transparent border-0">
+                                    <img src="asset/image/team-expert.svg" class="card-img-top w-auto h-auto" alt="...">
+                                    <div class="card-body ps-0 bg-transparent">
+                                        <p class="card-title fw-medium">Рачеева ЮлияГеннадьевна</p>
+                                        <p class="card-text fw-normal">Патентный поверенный РФ</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card rounded bg-transparent border-0">
+                                    <img src="asset/image/team-expert.svg" class="card-img-top w-auto h-auto" alt="...">
+                                    <div class="card-body ps-0 bg-transparent">
+                                        <p class="card-title fw-medium">Пахоменко АлинаАликовна</p>
+                                        <p class="card-text fw-normal">Адвокат</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="container-lg mt-5">
+
+
+                        <!-- Title & Tabs -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="mb-0">Мы на форумах</h2>
+                            <div>
+                                <a href="#" class="me-3 text-muted text-decoration-none">Прошедшие</a>
+                                <a href="#" class="fw-bold text-danger text-decoration-none">Будущие</a>
+                            </div>
+                        </div>
+
+                        <!-- Event Item 2 -->
+                        <div class="event-item d-flex justify-content-between align-items-center border-bottom py-4">
+                            <!-- Chap: rasm + ism + lavozim -->
+                            <div class="d-flex align-items-center">
+                                <img src="asset/image/team-expert.svg" class="rounded-circle me-3" width="70"
+                                    height="70" alt="">
+                                <div>
+                                    <h6 class="mb-1">Раймм Лидия Вячеславовна</h6>
+                                    <small class="text-muted">Руководитель отдела патентно-юридического
+                                        делопроизводства</small>
+                                </div>
+                            </div>
+                            <!-- O‘rta: tadbir -->
+                            <div class="flex-grow-1 px-4">
+                                <h5 class="mb-1">Менторская гостинная</h5>
+                                <p class="mb-0 text-muted">Индивидуальная 30-ти минутная сессия с разбором вашего кейса.</p>
+                            </div>
+                            <!-- O‘ng: sana/vaqt -->
+                            <div class="text-end" style="min-width: 120px;">
+                                <strong>28 июня - 9 июля</strong>
+                                <div class="text-muted">15:30</div>
+                            </div>
+                        </div>
+                        <!-- Event Item 2 -->
+                        <div class="event-item d-flex justify-content-between align-items-center border-bottom py-4">
+                            <!-- Chap: rasm + ism + lavozim -->
+                            <div class="d-flex align-items-center">
+                                <img src="asset/image/team-expert.svg" class="rounded-circle me-3" width="70"
+                                    height="70" alt="">
+                                <div>
+                                    <h6 class="mb-1">Золотов Геннадий Борисович</h6>
+                                    <small class="text-muted">Руководитель отдела патентно-юридического
+                                        делопроизводства</small>
+                                </div>
+                            </div>
+                            <!-- O‘rta: tadbir -->
+                            <div class="flex-grow-1 px-4">
+                                <h5 class="mb-1">WIPO SUMMER SCHOOL — 2021 RUSSIA</h5>
+                                <p class="mb-0 text-muted">Летняя школа Всемирной организации интеллектуальной
+                                    собственности</p>
+                            </div>
+                            <!-- O‘ng: sana/vaqt -->
+                            <div class="text-end" style="min-width: 120px;">
+                                <strong>28 июня - 9 июля</strong>
+                                <div class="text-muted">15:30</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/swiper-bundle.min.js"></script>
+    <script src="asset/js/main.js"></script>
+</body>
+
+</html>
