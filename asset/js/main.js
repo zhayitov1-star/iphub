@@ -202,9 +202,9 @@ const swiper = new Swiper(".services-swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    // 480px dan boshlab
-    480: {
-      slidesPerView: 1,
+    // 576px dan boshlab
+    576: {
+      slidesPerView: 2,
       spaceBetween: 20,
     },
     // 768px dan boshlab

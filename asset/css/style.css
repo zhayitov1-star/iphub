@@ -29,8 +29,6 @@ a {
     --color-white-dark-20: rgba(150, 150, 150, 0.05);
 }
 
-
-
 h1,
 h2,
 h3,
@@ -49,6 +47,22 @@ body {
     background: var(--color-dark);
 }
 
+.fs-38 {
+    font-size: 38px;
+}
+
+.fs-36 {
+    font-size: 36px;
+}
+
+.color-gray {
+    color: var(--color-gray);
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
 
 /* Navbar */
 .sticky {
@@ -64,7 +78,6 @@ body {
 .navbar-expand-lg {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
     background-color: #1B1B1B !important;
-    /* fon rangi */
 }
 
 .navbar-toggler:focus {
@@ -87,15 +100,9 @@ body {
 .header-contact-text,
 .services-swiper .card-text {
     font-size: 14px;
-    color: var(--color-gray);
 }
 
-
-
-
 /* Header */
-
-
 
 .fancy-quote {
     font-size: 55px;
@@ -105,12 +112,9 @@ body {
 
 .fancy-quote::before {
     content: "‘";
-    /* ochilish qo‘shtirnoq */
     position: absolute;
     left: -20px;
-    /* chapga chiqarish */
     top: -10px;
-    /* biroz yuqoriga yoki pastga tushirish */
     font-size: 50px;
     color: var(--color-primary);
 }
@@ -119,16 +123,10 @@ body {
     content: "’";
     position: absolute;
     left: 60%;
-    /* matn tugagan joyga yopishtirish */
     bottom: 0px;
     transform: translateX(0);
-    /* kerak bo‘lsa -20px qo‘shib sozlaysan */
     font-size: 50px;
     color: var(--color-primary);
-}
-
-.header-text {
-    color: var(--color-gray);
 }
 
 .header-text:nth-last-child(1) {
@@ -145,29 +143,10 @@ body {
 }
 
 /* About */
-.about,
-.about-brand {
-    margin-top: 80px;
-}
-
-.about-content .about-title,
-.about-brand .about-title,
-.services-title,
-.collection-title {
-    font-size: 38px;
-}
-
-.about-content .about-text,
-.about-brand .about-text,
-.services-subtitle,
-.collection-subtitle {
-    color: var(--color-gray);
-}
 
 .about-card {
     background: linear-gradient(145deg, #2cd4cd 15%, transparent 30%);
     padding: 1px;
-    /* chiziq qalinligi */
     border-radius: 17px !important;
 }
 
@@ -176,13 +155,7 @@ body {
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
-
-.about-blog h2 {
-    font-size: 36px;
-}
-
 .about-blog p {
-    color: var(--color-gray);
     width: 75%;
 }
 
@@ -191,9 +164,6 @@ body {
 }
 
 /* services */
-.services {
-    margin-top: 80px;
-}
 
 .services-bg-img {
     height: 970px;
@@ -225,7 +195,6 @@ body {
 
 .services-swiper .card-title {
     font-size: 18px;
-    color: var(--color-gray);
     transition: .3s;
 }
 
@@ -255,7 +224,7 @@ body {
 }
 
 .swiper-button-next,
- .swiper-button-prev {
+.swiper-button-prev {
     top: auto;
     bottom: 0px;
     transform: none;
@@ -292,17 +261,8 @@ body {
 }
 
 /* offers */
-
-.offers-image .services-bg-img {
-    height: 970px !important;
-}
-
-.offers-image {
-    height: 100%;
-    object-fit: cover;
-}
-
-.offers-image::after {
+.offers-image::after,
+.consultation-bg-image::after {
     content: "";
     position: absolute;
     top: 0;
@@ -323,10 +283,6 @@ body {
     left: -15px !important;
 }
 
-.offers-quesion h3 {
-    font-size: 36px;
-}
-
 .offer-answer.active {
     background: var(--color-primary);
 }
@@ -339,6 +295,7 @@ body {
 .collection {
     margin-top: 160px;
 }
+
 .collection-card {
     height: 280px;
 }
@@ -356,26 +313,66 @@ body {
     color: var(--color-gray-dark);
 }
 
-.card-footer .card-text {
-    color: var(--color-gray);
-}
-
 /* team */
-
 .team-bg-image .team-img {
     object-fit: cover;
-    height: 1500px;
+    height: 1300px;
 }
 
-.team-bg-image .card img{
-     filter: grayscale(100%);
+.team-bg-image .card img {
+    filter: grayscale(100%);
 }
 
 .team-bg-image .card .card-body .card-title {
     font-size: 18px;
     color: var(--color-dark);
 }
+
+.team-subtitle {
+    color: var(--color-gray);
+}
+
 .team-bg-image .card .card-body .card-text {
+    font-size: 14px;
+}
+
+/* ewent */
+.event-line {
+    position: relative;
+}
+
+.event-line:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #8C8C8C80 50%, transparent 95%);
+}
+
+.event-items img {
+    width: 100px;
+    height: 100px;
+    filter: grayscale(100%);
+}
+
+.event-text p:nth-child(1) {
+    font-size: 18px
+}
+
+.underline-gradient {
+    height: 1px;
+    background: linear-gradient(to right, #dc3545 50%, transparent 95%);
+}
+
+/* Consultation-cta */
+.consultation-bg-img {
+    height: 500px;
+}
+
+/* footer */
+.footer-logo p{
     font-size: 14px;
 }
 
@@ -392,16 +389,22 @@ body {
         height: 300px;
     }
 
-    .collection-card-top img{
+    .collection-card-top img {
         max-width: 147px !important;
+    }
+
+    .event-time {
+        width: 164px;
+        height: 164px;
+        border: 1px solid var(--color-primary);
+    }
+
+    .consultation-img img {
+        width: 325px !important;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .container-lg {
-        --bs-gutter-x: 4rem;
-    }
-
     .fancy-quote {
         font-size: 44px;
     }
@@ -410,10 +413,8 @@ body {
         left: 65%;
     }
 
-    .about-content .about-title,
-    .about-brand .about-title,
-    .services-title,
-    .collection-title {
+    /* fs-lg-32 bu max-width: 992px gacha  */
+    .fs-lg-32 {
         font-size: 32px;
     }
 
@@ -429,6 +430,21 @@ body {
     .offers-image .services-bg-img {
         height: 1170px !important;
     }
+
+    .event-time {
+        width: 140px;
+        height: 140px;
+        border: 1px solid var(--color-primary);
+    }
+
+    .consultation-img img {
+        width: 250px !important;
+    }
+
+    .team-bg-image .team-img {
+        height: 1505px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -448,11 +464,8 @@ body {
         height: 110px;
     }
 
-    .about-blog h2,
-    .about-content .about-title,
-    .about-brand .about-title,
-    .services-title,
-    .collection-title {
+
+    .fs-28 {
         font-size: 28px;
     }
 
@@ -472,17 +485,24 @@ body {
         right: 20px;
     }
 
+    .team-subtitle {
+        font-size: 14px;
+    }
 
+    .consultation-bg-img {
+        height: 400px;
+    }
+
+    .team-swiper {
+    padding-bottom: 30px;
+}
 
 }
 
 @media screen and (max-width: 576px) {
 
-    .header-text,
-    .header-personal-button,
-    .offers-text p,
-    .offers-dots p,
-    .offer-answer p {
+    /* sm bu max-width: 576px gacha  */
+    .fs-sm-14 {
         font-size: 14px;
     }
 
@@ -508,11 +528,16 @@ body {
         right: 10px;
     }
 
+    .team-bg-image .team-img {
+        height: 1850px;
+    }
+
 }
 
-@media screen and (min-width: 576px){
+@media screen and (min-width: 576px) {
+
     .collection-card-top,
-    .collection-body{
+    .collection-body {
         height: 100%;
     }
 }
