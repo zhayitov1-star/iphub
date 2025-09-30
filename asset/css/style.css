@@ -43,6 +43,10 @@ p,
     font-family: 'Montserrat', sans-serif !important;
 }
 
+small {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 body {
     background: var(--color-dark);
 }
@@ -92,7 +96,8 @@ body {
     font-size: 34px;
 }
 
-.header-contact-title {
+.header-contact-title,
+.footer-contact-title {
     font-size: 18px;
     color: var(--color-gray-dark);
 }
@@ -136,6 +141,7 @@ body {
 .header-personal-button {
     background: var(--color-primary) !important;
     border: 1px solid var(--color-primary);
+    overflow: visible;
 }
 
 .header-services-button img {
@@ -153,6 +159,7 @@ body {
 .about-blog,
 .about-brand-img {
     background: rgba(255, 255, 255, 0.05) !important;
+    /* border-radius: calc(17px - 1px) !important;  */
 }
 
 .about-blog p {
@@ -372,7 +379,7 @@ body {
 }
 
 /* footer */
-.footer-logo p{
+.footer-logo p {
     font-size: 14px;
 }
 
@@ -452,6 +459,12 @@ body {
         max-width: 350px !important;
     }
 
+    /* sm bu max-width: 768px gacha  */
+    .fs-sm-14 {
+        font-size: 14px;
+    }
+
+
     .fancy-quote {
         font-size: 34px;
     }
@@ -473,7 +486,6 @@ body {
     .services-subtitle,
     .collection-subtitle {
         max-width: 100%;
-        font-size: 14px;
     }
 
     .services-swiper .card-title {
@@ -485,26 +497,22 @@ body {
         right: 20px;
     }
 
-    .team-subtitle {
-        font-size: 14px;
-    }
-
     .consultation-bg-img {
         height: 400px;
     }
 
     .team-swiper {
-    padding-bottom: 30px;
-}
+        padding-bottom: 30px;
+    }
+
+
+    small {
+        font-size: 12px;
+    }
 
 }
 
 @media screen and (max-width: 576px) {
-
-    /* sm bu max-width: 576px gacha  */
-    .fs-sm-14 {
-        font-size: 14px;
-    }
 
     .fancy-quote::after {
         bottom: -10px;
@@ -530,6 +538,23 @@ body {
 
     .team-bg-image .team-img {
         height: 1850px;
+    }
+
+    .footer-contact-title {
+        font-size: 16px;
+    }
+
+    .header-personal-button::after,
+    .consultation-button::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -12px;
+        right: -12px;
+        bottom: -6px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transform: rotate(-8deg);
     }
 
 }
