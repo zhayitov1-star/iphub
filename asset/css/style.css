@@ -67,6 +67,12 @@ body {
     margin-top: 80px;
 }
 
+.swiper {
+    margin-left: 0;
+    margin-right: -15px;
+    width: calc(100% + 50px);
+}
+
 
 /* Navbar */
 .sticky {
@@ -150,16 +156,15 @@ body {
 
 /* About */
 
-.about-card {
+.about .about-card {
     background: linear-gradient(145deg, #2cd4cd 15%, transparent 30%);
     padding: 1px;
-    border-radius: 17px !important;
+    border-radius: 17px;
 }
 
-.about-blog,
+.about .about-blog,
 .about-brand-img {
-    background: rgba(255, 255, 255, 0.05) !important;
-    /* border-radius: calc(17px - 1px) !important;  */
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .about-blog p {
@@ -173,7 +178,7 @@ body {
 /* services */
 
 .services-bg-img {
-    height: 970px;
+    height: 1170px;
     object-fit: cover;
 }
 
@@ -298,6 +303,50 @@ body {
     background: var(--color-white-5);
 }
 
+.offer-answer {
+    background: var(--color-white-5);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.offer-answer:hover {
+    transform: translateY(-2px);
+}
+
+.offer-answer.active {
+    background: var(--color-primary) !important;
+}
+
+.common-input {
+    margin-top: 1rem;
+}
+
+.swiper {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.quiz-box .swiper-pagination {
+    font-family: "STIX Two Text", serif;
+}
+
+.quiz-box .swiper-pagination-current {
+    color: var(--color-primary);
+}
+
+.swiper-pagination {
+    position: inherit;
+    top: 45px;
+    left: 457px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
 /* collection */
 .collection {
     margin-top: 160px;
@@ -389,6 +438,11 @@ body {
         font-size: 48px;
     }
 
+    .swiper-pagination {
+        left: 380px;
+    }
+
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -408,6 +462,10 @@ body {
 
     .consultation-img img {
         width: 325px !important;
+    }
+
+    .swiper-pagination {
+        left: 305px;
     }
 }
 
@@ -450,6 +508,10 @@ body {
 
     .team-bg-image .team-img {
         height: 1505px;
+    }
+
+    .swiper-pagination {
+        left: 265px;
     }
 
 }
@@ -508,6 +570,10 @@ body {
 
     small {
         font-size: 12px;
+    }
+
+        .swiper-pagination {
+        left: 315px;
     }
 
 }
