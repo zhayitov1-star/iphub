@@ -48,6 +48,7 @@
 const swiper = new Swiper(".services-swiper", {
   slidesPerView: 4,
   spaceBetween: 30,
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -76,6 +77,11 @@ const swiper = new Swiper(".services-swiper", {
     // 1200px dan boshlab
     1200: {
       slidesPerView: 4,
+      spaceBetween: 30,
+    },
+
+    1400: {
+      slidesPerView: 5,
       spaceBetween: 30,
     },
   },
@@ -183,7 +189,7 @@ const collection = new Swiper(".collection-swiper", {
     },
     // 1200px dan boshlab
     1200: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       spaceBetween: 30,
     },
   },
@@ -219,7 +225,7 @@ const team = new Swiper(".team-swiper", {
     },
     // 1200px dan boshlab
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 5,
       spaceBetween: 30,
     },
   },
@@ -235,23 +241,19 @@ const quiz_swiper = new Swiper(".quiz-swiper", {
 
 });
 
-// total slide sonini chiqarish
-document.querySelectorAll('.total-slides').forEach(el => el.textContent = swiper.slides.length);
-
-// savol bosilganda active bo'lish va umumiy inputni ko'rsatish
 document.querySelectorAll('.quiz-box').forEach(box => {
-  const answers = box.querySelectorAll('.offer-answer');
-  const commonInput = box.querySelector('.common-input');
-  answers.forEach(answer => {
-    answer.addEventListener('click', () => {
-      answers.forEach(a => a.classList.remove('active'));
-      answer.classList.add('active');
-      if (commonInput) commonInput.classList.remove('d-none');
+  const quizzes = box.querySelectorAll('.quiz');
+
+  quizzes.forEach(quiz => {
+    const answers = quiz.querySelectorAll('.offer-answer');
+    const commonInput = quiz.querySelector('.common-input');
+
+    answers.forEach(answer => {
+      answer.addEventListener('click', () => {
+        answers.forEach(a => a.classList.remove('active'));
+        answer.classList.add('active');
+        if (commonInput) commonInput.classList.remove('d-none');
+      });
     });
   });
-});
-
-// slayd almashtirilganda current raqamni yangilash
-swiper.on('slideChange', () => {
-  document.querySelectorAll('.current-slide').forEach(el => el.textContent = swiper.activeIndex + 1);
 });

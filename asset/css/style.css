@@ -150,7 +150,8 @@ body {
     overflow: visible;
 }
 
-.header-services-button img {
+.header-services-button img,
+.collection-button img{
     right: -15px;
 }
 
@@ -180,6 +181,7 @@ body {
 .services-bg-img {
     height: 1170px;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .services .card {
@@ -244,14 +246,44 @@ body {
 }
 
 .swiper-button-prev {
-    margin-left: -90px;
+    margin-left: -250px;
     width: 100px !important;
 }
 
 .swiper-button-next {
-    margin-left: -10px;
+    margin-left: -173px;
     width: 100px !important;
 }
+
+/* 🔹 Container ichida tursa ham chiqib keta olishi uchun */
+.services .container,
+.services .container-lg,
+.services .container-fluid {
+  overflow: visible !important;
+}
+
+
+
+
+
+
+    /* 🔹 Swiper joylashuvi */
+
+.services-swiper,
+.collection-swiper,
+.team-swiper {
+  position: relative;
+  width: calc(100vw - ((100vw - 98%) / 2)) !important; /* faqat o‘ng tomonga cho‘ziladi */
+  max-width: none;
+  left: 0; /* chap tomonni container ichida qoldiradi */
+  box-sizing: border-box;
+}
+
+
+
+
+
+
 
 /* Default iconni olib tashlash */
 .swiper-button-next::after,
@@ -309,16 +341,8 @@ body {
     transition: .2s;
 }
 
-.offer-answer:hover {
-    transform: translateY(-2px);
-}
-
 .offer-answer.active {
     background: var(--color-primary) !important;
-}
-
-.common-input {
-    margin-top: 1rem;
 }
 
 .swiper {
@@ -326,30 +350,24 @@ body {
     box-sizing: border-box;
 }
 
-.quiz-box .swiper-pagination {
-    font-family: "STIX Two Text", serif;
-}
-
 .quiz-box .swiper-pagination-current {
     color: var(--color-primary);
 }
 
-.swiper-pagination {
-    position: inherit;
-    top: 45px;
-    left: 457px;
-    font-weight: 600;
+.quiz-box .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 100%);
+    top: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    display: flex;
+    justify-content: end;
+    font-family: "STIX Two Text", serif;
+
 }
-
-
-
-
-
-
 
 /* collection */
 .collection {
-    margin-top: 160px;
+    margin: 160px 0;
 }
 
 .collection-card {
@@ -437,12 +455,6 @@ body {
     .fancy-quote {
         font-size: 48px;
     }
-
-    .swiper-pagination {
-        left: 380px;
-    }
-
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -464,9 +476,10 @@ body {
         width: 325px !important;
     }
 
-    .swiper-pagination {
-        left: 305px;
+    .collection {
+        margin: 120px 0;
     }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -484,7 +497,7 @@ body {
     }
 
     .services-bg-img {
-        height: 777px;
+        height: 850px;
     }
 
     .offers-position-img {
@@ -510,9 +523,13 @@ body {
         height: 1505px;
     }
 
-    .swiper-pagination {
-        left: 265px;
-    }
+      .services-swiper {
+    width: 100%;          
+    max-width: 100%;      
+    transform: none;      /* hech qanday surish yo‘q */
+    right: auto;
+    left: auto;
+  }
 
 }
 
@@ -572,9 +589,10 @@ body {
         font-size: 12px;
     }
 
-        .swiper-pagination {
-        left: 315px;
+    .collection {
+        margin: 80px 0;
     }
+
 
 }
 
@@ -589,7 +607,7 @@ body {
     }
 
     .offers-image .services-bg-img {
-        height: 1270px !important;
+        height: 1490px !important;
     }
 
     .offers-quesion h3 {
@@ -598,7 +616,7 @@ body {
 
     .offers-position-img {
         width: 150px;
-        top: -130px;
+        top: -175px;
         right: 10px;
     }
 
@@ -623,6 +641,11 @@ body {
         transform: rotate(-8deg);
     }
 
+}
+
+@media screen and (min-width: 768px) {
+
+    
 }
 
 @media screen and (min-width: 576px) {
