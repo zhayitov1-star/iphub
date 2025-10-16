@@ -1,49 +1,16 @@
-// window.onscroll = function () {
-//   myFunction();
-// };
+window.onscroll = function () {
+  myFunction();
+};
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
 
-// var header = document.getElementById("myHeader");
-// var sticky = header.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
-
-// function increasePeople() {
-//   let input = document.getElementById("peopleCount");
-//   let val = parseInt(input.value);
-//   if (val < 20) input.value = val + 1;
-// }
-// function decreasePeople() {
-//   let input = document.getElementById("peopleCount");
-//   let val = parseInt(input.value);
-//   if (val > 0) input.value = val - 1;
-// }
-
-
-
-// const swiper = new Swiper(".room-swiper", {
-//   // loop: true, 
-//   slidesPerView: 3,
-//   spaceBetween: 0,
-//   // centeredSlides: true,
-
-//   // Navigatsiya tugmalari
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   breakpoints: {
-//     320: { slidesPerView: 1 },
-//     768: { slidesPerView: 2 },
-//     1200: { slidesPerView: 3 },
-//   },
-// });
-
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
 
 const swiper = new Swiper(".services-swiper", {
   slidesPerView: 4,

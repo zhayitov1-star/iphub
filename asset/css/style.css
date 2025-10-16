@@ -158,14 +158,15 @@ body {
 /* About */
 
 .about .about-card {
-    background: linear-gradient(145deg, #2cd4cd 15%, transparent 30%);
+    background: linear-gradient(145deg, #DA4533 15%, transparent 30%);
     padding: 1px;
-    border-radius: 17px;
+    border-radius: 8px;
 }
 
 .about .about-blog,
 .about-brand-img {
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(145deg, #5C5C5C 100%, transparent 30%);
+    border-radius: 9px;
 }
 
 .about-blog p {
@@ -524,8 +525,8 @@ body {
     }
 
       .services-swiper {
-    width: 100%;          
-    max-width: 100%;      
+    width: 100%;
+    max-width: 100%;
     transform: none;      /* hech qanday surish yo‘q */
     right: auto;
     left: auto;
@@ -645,7 +646,7 @@ body {
 
 @media screen and (min-width: 768px) {
 
-    
+
 }
 
 @media screen and (min-width: 576px) {
